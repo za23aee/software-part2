@@ -1,0 +1,40 @@
+# Compiled class files
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+.project
+.classpath
+.settings/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Assignment files - DO NOT COMMIT
+explanation.rtf
+marking.rtf
+part1/
+
+# Build directories
+bin/
+build/
+out/
+target/
+
+# Log files
+*.log
