@@ -36,5 +36,8 @@ build/
 out/
 target/
 
+# Generated output files (referral letters, etc.)
+output/
+
 # Log files
 *.log
