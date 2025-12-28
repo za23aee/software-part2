@@ -218,6 +218,16 @@ public class ReferralController {
     }
 
     /**
+     * Updates an existing referral.
+     *
+     * @param referral The referral with updated data
+     * @return true if updated, false if not found
+     */
+    public boolean updateReferral(Referral referral) {
+        return referralManager.updateReferral(referral);
+    }
+
+    /**
      * Deletes a referral.
      *
      * @param referralId The referral ID

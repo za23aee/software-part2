@@ -147,6 +147,23 @@ public class ReferralManager {
     }
 
     /**
+     * Updates an existing referral with new data.
+     *
+     * @param updatedReferral The referral with updated data
+     * @return true if updated successfully, false if not found
+     */
+    public boolean updateReferral(Referral updatedReferral) {
+        for (int i = 0; i < referralQueue.size(); i++) {
+            if (referralQueue.get(i).getReferralId().equals(updatedReferral.getReferralId())) {
+                referralQueue.set(i, updatedReferral);
+                logAudit("Referral updated: " + updatedReferral.getReferralId());
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
      * Generates a referral email/letter content and saves it to a text file.
      * This simulates sending an email without actually sending one.
      *

@@ -352,8 +352,8 @@ public class ReferralDialog extends JDialog {
 
         // Save to controller (which uses ReferralManager singleton)
         if (referralController.getReferralById(referral.getReferralId()) != null) {
-            // Update existing - need to use ReferralManager directly for update
-            referralController.updateStatus(referral.getReferralId(), referral.getStatus());
+            // Update existing referral
+            referralController.updateReferral(referral);
         } else {
             referralController.addReferral(referral);
         }
