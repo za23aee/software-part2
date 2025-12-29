@@ -32,6 +32,7 @@ public class MainFrame extends JFrame {
     private AppointmentPanel appointmentPanel;
     private PrescriptionPanel prescriptionPanel;
     private ReferralPanel referralPanel;
+    private StaffPanel staffPanel;
 
     public MainFrame() {
         initializeControllers();
@@ -104,6 +105,7 @@ public class MainFrame extends JFrame {
                                                    clinicianController);
         referralPanel = new ReferralPanel(referralController, patientController,
                                           clinicianController, facilityController);
+        staffPanel = new StaffPanel(staffController, facilityController);
 
         tabbedPane.addTab("Patients", patientPanel);
         tabbedPane.addTab("Clinicians", clinicianPanel);
@@ -111,6 +113,7 @@ public class MainFrame extends JFrame {
         tabbedPane.addTab("Appointments", appointmentPanel);
         tabbedPane.addTab("Prescriptions", prescriptionPanel);
         tabbedPane.addTab("Referrals", referralPanel);
+        tabbedPane.addTab("Staff", staffPanel);
 
         add(tabbedPane, BorderLayout.CENTER);
     }
@@ -181,6 +184,7 @@ public class MainFrame extends JFrame {
         appointmentPanel.refreshData();
         prescriptionPanel.refreshData();
         referralPanel.refreshData();
+        staffPanel.refreshData();
     }
 
     public void setStatus(String message) {
